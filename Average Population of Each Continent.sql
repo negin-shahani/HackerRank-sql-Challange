@@ -1,0 +1,11 @@
+SELECT COUNTRY.Continent, FLOOR(AVG(CITY.POPULATION))
+FROM CITY INNER JOIN COUNTRY
+ON CITY.CountryCode = COUNTRY.Code
+GROUP BY COUNTRY.Continent;
+
+--output:
+--Asia 693038
+--Oceania 109189
+--Europe 175138
+--South America 147435
+--Africa 274439
